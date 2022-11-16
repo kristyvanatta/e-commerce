@@ -102,7 +102,7 @@ router.put('/:id', (req, res) => {
         ProductTag.destroy({ where: { id: productTagsToRemove } }),
         ProductTag.bulkCreate(newProductTags),
       ]);
-      res.status(200).json(product);
+      
     })
     .then((updatedProductTags) => res.json(updatedProductTags))
     .catch((err) => {
