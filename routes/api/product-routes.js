@@ -37,7 +37,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// create new product ------->????????
+// create new product 
 router.post('/', (req, res) => {
   // req.body should look like this...
   Product.create({
@@ -91,6 +91,7 @@ router.put('/:id', (req, res) => {
             product_id: req.params.id,
             tag_id,
           };
+          
         });
       // figure out which ones to remove
       const productTagsToRemove = productTags
@@ -103,10 +104,11 @@ router.put('/:id', (req, res) => {
         ProductTag.bulkCreate(newProductTags),
       ]);
       
+      res.status(200).json(product);
     })
     .then((updatedProductTags) => res.json(updatedProductTags))
     .catch((err) => {
-      // console.log(err);
+      console.log("hey", err);
       res.status(400).json(err);
     });
 });
