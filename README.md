@@ -39,4 +39,4 @@ Use the `schema.sql` file in the `db` folder to create the database with MySQL s
 
 ## Submission Links
 [GitHub Repository](https://github.com/kristyvanatta/e-commerce)
-[Video Link]()
+[Video Link](https://drive.google.com/file/d/1cslbSqJPHM_OmDDYVGtGok5hC-xzcAOa/view)
